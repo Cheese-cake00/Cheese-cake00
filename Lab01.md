@@ -1,7 +1,7 @@
 ## Lab 01
 
-- Name:
-- Email:
+- Name: Caeden Tisler
+- Email: Tisler.3@wright.edu
 
 ## Part 1 - GitHub Profile
 
@@ -11,16 +11,16 @@
 
 | Windows | Linux / Mac | Action |
 | ---     | ---         | ---    |
-| help    | man         |        |
-| Get-Location | pwd    |        |
-| Get-ChildItem | ls    |        |
-| mkdir   | mkdir       |        |
-| Set-Location | cd     |        |
-| New-Item | touch      |        |
-| Move-Item | mv        |        |
-| Copy-Item | cp        |        |
-| Remove-Item | rm      |        |
-| notepad.exe | vim     |        |
+| help    | man         |      Displays help about Windows PowerShell cmdlets and concepts.   |
+| Get-Location | pwd    |     gets your location in the computer   |
+| Get-ChildItem | ls    |    I got a list of date, times, and file names    |
+| mkdir   | mkdir       |     makes a directory   |
+| Set-Location | cd     |    sets my location to what i put after    |
+| New-Item | touch      |      makes items at your location  |
+| Move-Item | mv        |      moves an item to your location  |
+| Copy-Item | cp        |      copys an item to your location  |
+| Remove-Item | rm      |      removes an item at your location  |
+| notepad.exe | vim     |     opens notepad   |
 
 ## Part 3 - Command Line Navigation
 
@@ -44,6 +44,22 @@ My Command Line Shell is:
 9. Contents of `test.txt`:
 ```
 Put your words here
+2. mkdir DirA
+3. mkDir "Dir B"
+4. Set-Location DirA
+5. cd ../"Dir B"
+6. cd ..
+7. New-Item test.txt
+8. Move-Item test.txt DirA
+9. Get-Content test.txt
+10. cp test.txt copy.txt
+11. ls
+12. cp test.txt fodder.txt
+    mv fodder.txt "Dir B"
+13. cd ..
+    rm "Dir B"
+    
+
 ```
 10. Make a copy of `test.txt` named `copy.txt` in `DirA`:
 11. View the contents of `DirA`: 
