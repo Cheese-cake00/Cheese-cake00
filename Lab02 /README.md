@@ -43,37 +43,38 @@ Command to SSH to AWS instance:
 
 ## Part 4 Answers
 
-1. Command(s) to create group named `squad` and add members:
-2. Command(s) to add `ubuntu` & user to group `squad`:
-3. Command(s) to allow `squad` to view the `ubuntu` user's home directory contents:
-4. Command(s) to modify `share` to have group ownership of `squad`:
-5. Describe your tests and commands with the user account:
-6. Describe the full set of permissions / settings that enable the user to make edits:
+1. Command(s) to create group named `squad` and add members: sudo addgroup squad
+2. Command(s) to add `ubuntu` & user to group `squad`: sudo usermod -aG squad ubuntu
+                                                       sudo usermod -aG squad caede
+4. Command(s) to allow `squad` to view the `ubuntu` user's home directory contents: sudo chmod g+r /home/ubuntu
+5. Command(s) to modify `share` to have group ownership of `squad`: sudo chown :squad share
+6. Describe your tests and commands with the user account: works being as user caede i can see test.txt in ubuntu's home
+7. Describe the full set of permissions / settings that enable the user to make edits: caede can make a file in share because the group has reading and writing permissions
 
 ## Part 5 Answers
 
 For each, write the command used or answer the question posed.
 
-1. Command(s) to make file using `sudo`: 
-2. Command(s) to make file with `root`:
-3. Describe / compare ownership and permissions of files:
+1. Command(s) to make file using `sudo`: sudo touch madwithsudo.txt
+2. Command(s) to make file with `root`: sudo su, touch madewithroot.txt
+3. Describe / compare ownership and permissions of files: they are the same perms and the owners of both are root
 4. Which account can do what actions? (Type Y or N in columns)
 
 Contents inside of `share`
 | Account   | Can View  | Can Edit  | Can Change Permissions    |
 | ---       | ---       | ---       | ---                       |
-| `root`    |           |           |                           |
-| `ubuntu`  |           |           |                           |
-| `BOB`     |           |           |                           |
+| `root`    |   y        |    y       |            y               |
+| `ubuntu`  |   y        |    y       |            y               |
+| `BOB`     |    y       |     y      |            n               |
 
 `madewithsudo.txt`
 | Account   | Can View  | Can Edit  | Can Change Permissions    |
 | ---       | ---       | ---       | ---                       |
-| `root`    |           |           |                           |
-| `ubuntu`  |           |           |                           |
-| `BOB`     |           |           |                           |
+| `root`    |     y      |      y     |             y              |
+| `ubuntu`  |     y      |      y     |              y             |
+| `BOB`     |      y     |      n     |               n            |
 
-5. Command(s) to modify permissions:
+5. Command(s) to modify permissions: sudo chown ubuntu:squad madwithsudo.txt, sudo chmod 662 madwithsudo.txt
 6. How to give user account `sudo`:
 
 
