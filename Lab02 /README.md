@@ -75,6 +75,6 @@ Contents inside of `share`
 | `BOB`     |      y     |      n     |               n            |
 
 5. Command(s) to modify permissions: sudo chown ubuntu:squad madwithsudo.txt, sudo chmod 662 madwithsudo.txt
-6. How to give user account `sudo`:
+6. How to give user account `sudo`: usermod -aG sudo caede
 
 
